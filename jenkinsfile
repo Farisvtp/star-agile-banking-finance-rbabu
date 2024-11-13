@@ -24,7 +24,7 @@ pipeline {
             }
        stage('Create Docker Image') {
            steps {
-               sh 'docker build -t faris7/banking-project-demo:1.0 .'
+               sh 'docker build -t faris7/banking-project-demo:2.0 .'
                     }
                 }
        stage('Docker-Login') {
@@ -36,7 +36,7 @@ pipeline {
                 }
        stage('Push-Image') {
            steps {
-               sh 'docker push faris7/banking-project-demo:1.0'
+               sh 'docker push faris7/banking-project-demo:2.0'
                      }
                 }
        stage('Config & Deployment') {
